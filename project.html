@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Certificates</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            max-width: 6000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            background: black;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+        }
+        .left-section, .right-section {
+            width: 50%;
+        }
+        h1 {
+            color: #b74b4b;
+        }
+        .certificate-slider {
+            margin-top: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px; /* Fixed height to prevent resizing */
+            overflow: hidden;
+        }
+        #certificateContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 4px;
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>Project Information</h1>
+            <p><strong>Project Title:</strong> Smart Tool Management System</p>
+            <p><strong>Description:</strong> A tool management system designed to streamline inventory and tool tracking in mechanical workshops.</p>
+        </div>
+        
+        <div class="right-section">
+            <h2>Certificates</h2>
+            <div class="certificate-slider">
+                <div id="certificateContainer">
+                    <img class="active" src="C:\Users\ACER\OneDrive\Pictures\Screenshots\Screenshot 2025-02-26 224618.png" alt="Certificate 1">
+                    <img src="C:\Users\ACER\OneDrive\Pictures\Screenshots\Screenshot 2025-02-26 224710.png" alt="Certificate 2">
+                    <img src="C:\Users\ACER\OneDrive\Pictures\logo.jpg" alt="Certificate 3">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let currentIndex = 0;
+        function changeCertificate() {
+            let imgElements = document.querySelectorAll("#certificateContainer img");
+            if (imgElements.length > 0) {
+                imgElements[currentIndex].classList.remove("active");
+                currentIndex = (currentIndex + 1) % imgElements.length;
+                imgElements[currentIndex].classList.add("active");
+            }
+        }
+        setInterval(changeCertificate, 5000);
+    </script>
+</body>
+</html>
