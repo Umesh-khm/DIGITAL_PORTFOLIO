@@ -45,7 +45,7 @@ header{
     transform: scale(1.1);
 }
 
-nav ul {
+nav {
   list-style: none;
   display: flex;
   gap: 20px;
@@ -65,13 +65,13 @@ nav a.active{
     color: #b74b4b;
     border-bottom: 3px solid #b74b4b;
 }
-@media (max-width: 100px) {
-  nav ul {
+@media (max-width: 800px) {
+  nav {
     flex-direction: column;
     gap: 10px;
   }
 }
-@media(max-width:995px){
+/* @media(max-width:995px){
     nav{
         position: absolute;
         display: none;
@@ -99,7 +99,7 @@ nav a.active{
         border-radius: 0.5rem;
         border-bottom: 0.5rem solid #b74b4b;
     }
-}
+} */
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
