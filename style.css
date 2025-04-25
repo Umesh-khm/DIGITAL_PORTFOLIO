@@ -44,6 +44,14 @@ header{
 .logo:hover{
     transform: scale(1.1);
 }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+}
+
 nav a{
     font-size: 1.8rem;
     color: white;
@@ -56,6 +64,12 @@ nav a:hover,
 nav a.active{
     color: #b74b4b;
     border-bottom: 3px solid #b74b4b;
+}
+@media (max-width: 100px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 @media(max-width:995px){
     nav{
