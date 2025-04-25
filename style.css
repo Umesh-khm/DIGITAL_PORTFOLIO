@@ -65,7 +65,7 @@ nav a.active{
     color: #b74b4b;
     border-bottom: 3px solid #b74b4b;
 }
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   nav {
     flex-direction: column;
     gap: 10px;
